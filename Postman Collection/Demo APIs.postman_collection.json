@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "b3aa7bd1-3942-492c-8e74-8fe047a051c9",
+		"name": "Demo APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Cards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1900/api/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1900",
+					"path": [
+						"api",
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by pincode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1900/api/cards/H4A3K4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1900",
+					"path": [
+						"api",
+						"cards",
+						"H4A3K4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"UnitId\":\"123\",\n\t\"OpeId\":\"234\",\n\t\"OpeId6\":\"234566\",\n\t\"InstNM\":\"demo\",\n\t\"City\":\"Montreal\",\n\t\"State\":\"QC\",\n\t\"Pincode\":\"H4A3K4\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1900/api/cards/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1900",
+					"path": [
+						"api",
+						"cards",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete card",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"UnitId\":123\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1900/api/cards/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1900",
+					"path": [
+						"api",
+						"cards",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
